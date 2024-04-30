@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Gruppo&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:'Gruppo',Arial, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Gruppo',Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
+    width: 100%;
+  }
+p {
+    padding: 2rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: stretch;
+}
+.label{
+    text-align: center;
+    font-family: 'Exo','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+@media screen and (min-width:772px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    img {
+        border-radius: 50%;
+    }
+    .grid figure:nth-child(9n) {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (min-width:992px) {
+   
+    .grid img:nth-child(3n) {
+        border-radius: 1px;
+    }
+    img {
+        border-radius: 0px;
+    }
+    .grid figure:nth-child(3n) {
+        grid-column: 1 / span 2;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    body {
+      scroll-behavior:auto; 
+  }
+}
+@media (prefers-color-scheme: dark) {
+    .grid .label {
+      background-color: #222;
+      color: #fff;
+      border-color: #000;
+    }
+  }
